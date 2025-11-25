@@ -1,4 +1,4 @@
-name: Deploy Cloudflare Pages (current-deployed)
+name: Deploy Cloudflare Pages
 
 on:
     push:
@@ -10,10 +10,22 @@ jobs:
         runs-on: ubuntu-latest
         permissions:
             contents: read
+            id-token: write
 
         steps:
             - name: Checkout
               uses: actions/checkout@v4
+
+            - name: Setup Node
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 20
+
+            - name: Install dependencies
+              run: npm ci
+
+            - name: Build Vite App
+              run: npm run build
 
             - name: Publish to Cloudflare Pages via Wrangler
               uses: cloudflare/wrangler-action@v3
