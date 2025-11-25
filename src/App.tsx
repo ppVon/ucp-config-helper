@@ -36,7 +36,7 @@ const App: React.FC = () => {
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-          <img src="/src/assets/icon.png" alt="Mod Icon" />
+          <img src="/icon.png" alt="Mod Icon" />
           <h1 style={{ margin: 0 }}>Config Helper</h1>
         </div>
 
@@ -48,7 +48,7 @@ const App: React.FC = () => {
             title="CurseForge"
           >
             <img
-              src="/src/assets/curseforge.svg"
+              src="/curseforge.svg"
               alt="CurseForge"
               className="svg"
               style={{
@@ -65,7 +65,7 @@ const App: React.FC = () => {
             title="Modrinth"
           >
             <img
-              src="/src/assets/modrinth.svg"
+              src="/modrinth.svg"
               alt="Modrinth"
               className="svg"
               style={{ width: "48px", height: "48px" }}
@@ -80,7 +80,7 @@ const App: React.FC = () => {
             className="svg"
           >
             <img
-              src="/src/assets/github.svg"
+              src="/github.svg"
               alt="GitHub"
               style={{ width: "48px", height: "48px" }}
             />
